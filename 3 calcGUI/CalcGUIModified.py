@@ -1,6 +1,6 @@
 from tkinter import *
 from math import sqrt as sqr
-
+from math import sin
 
 class Application(Frame):
     """
@@ -144,6 +144,15 @@ class Application(Frame):
         Creates the widgets to be used in the grid.
         :return: None
         """
+        self.sin_bttn = Button(self, text="sin", width=9, height=3, command=lambda: self.add_chr('sin'))
+        self.sin_bttn.grid(row=1, column=6)
+
+        self.tan_bttn = Button(self, text="tan", width=9, height=3, command=lambda: self.add_chr('tan'))
+        self.tan_bttn.grid(row=2, column=6)
+
+        self.cos_bttn = Button(self, text="cos", width=9, height=3, command=lambda: self.add_chr('cos'))
+        self.cos_bttn.grid(row=3, column=6)
+
         self.eq_bttn = Button(self, text="=", width=20, height=3, bg="Orange", command=lambda: self.calculate())
         self.eq_bttn.grid(row=4, column=4, columnspan=2)
 
@@ -168,7 +177,7 @@ class Application(Frame):
         self.mod_bttn = Button(self, text="%", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr('%'))
         self.mod_bttn.grid(row=4, column=2)
 
-        self.seven_bttn = Button(self, text="Bushra", width=9, height=3, bg='LightBlue', fg='red',command=lambda: self.add_chr("Siddiqi"))
+        self.seven_bttn = Button(self, text="7", width=9, height=3, bg='LightBlue', fg='red',command=lambda: self.add_chr("7"))
         self.seven_bttn.grid(row=1, column=0)
 
         self.eight_bttn = Button(self, text="8", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(8))
@@ -186,7 +195,7 @@ class Application(Frame):
         self.six_bttn = Button(self, text="6", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(6))
         self.six_bttn.grid(row=2, column=2)
 
-        self.one_bttn = Button(self, text="1", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr(1))
+        self.one_bttn = Button(self, text="Uchenna", width=9, height=3,bg='LightBlue', fg='red', command=lambda: self.add_chr("Mogbo"))
         self.one_bttn.grid(row=3, column=0)
 
         self.two_bttn = Button(self, text="2", width=9, height=3, bg='LightBlue', fg='red',command=lambda: self.add_chr(2))
